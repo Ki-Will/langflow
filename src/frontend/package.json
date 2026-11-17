@@ -119,9 +119,9 @@
     "zustand": "^4.5.2"
   },
   "scripts": {
-    "dev:docker": "vite --host 0.0.0.0",
-    "start": "vite",
-    "build": "vite build",
+    "dev:docker": "node init && vite --host 0.0.0.0",
+    "start": "node init && vite",
+    "build": "node init && vite build",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
@@ -136,7 +136,7 @@
     "type-check": "tsc --noEmit --pretty --project tsconfig.json && vite",
     "storybook": "storybook dev -p 6006",
     "storybook:network": "storybook dev -p 6006 --host 0.0.0.0",
-    "build-storybook": "storybook build",
+    "build-storybook": "node init && storybook build",
     "chromatic": "chromatic --project-token=${CHROMATIC_PROJECT_TOKEN}"
   },
   "browserslist": {
